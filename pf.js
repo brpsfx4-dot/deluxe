@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (imgElement) {
         if (usuarioActivo) { 
-            imgElement.src = `./rsc/us/${usuarioActivo}.png`;
+            imgElement.src = `./${usuarioActivo}.png`;
             imgElement.style.display = "block";
             imgElement.style.width = "5dvh";
             imgElement.style.height = "5dvh";
