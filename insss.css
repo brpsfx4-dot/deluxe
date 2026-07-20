@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+}
+
+.hdd {
+    width: 100%;
+}
+
+.bx1 {
+    width: 100%;
+    background-image: url('../rsc/bk/bdbl.png');
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2dvh;
+    position: relative;
+    z-index: 2;
+}
+
+.login-form {
+    font-family: "Montserrat", sans-serif;
+    background: rgba(0, 0, 0, 0.4); 
+    padding: 4dvh;
+    border-radius: 5dvh;
+    border: 0.1dvh solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    display: flex;
+    flex-direction: column;
+    gap: 3dvh;
+    width: 100%;
+    max-width: 50dvh;
+    margin: 0;
+}
+
+.login-form h2 {
+    font-size: 3.5dvh;
+    text-align: center;
+    color: rgb(233, 198, 0); 
+    text-shadow: 0 0 5px rgba(255, 217, 0, 0.8), 0 0 15px rgb(233, 198, 0);
+    margin-bottom: 1dvh;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1dvh;
+    text-align: left;
+}
+
+.input-group label {
+    color: white;
+    font-size: 1.6dvh;
+    letter-spacing: 0.1dvh;
+    text-transform: uppercase;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+.input-group input {
+    font-family: "Montserrat", sans-serif;
+    background: rgba(255, 255, 255, 0.05);
+    border: 0.3dvh solid rgba(255, 255, 255, 0.3);
+    border-radius: 1dvh;
+    padding: 1.5dvh;
+    color: rgb(233, 198, 0);
+    font-size: 1.8dvh;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.input-group input:focus {
+    border-color: rgb(233, 198, 0);
+    box-shadow: 0 0 1dvh rgba(233, 198, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.login-form .btinc {
+    margin-top: 2dvh;
+    width: 100%; 
+}
+
+.login-form .btinc {
+    font-family: "Montserrat", sans-serif;
+    background: rgba(255, 255, 255, 0.05);
+    border: 0.3dvh solid rgba(255, 255, 255, 0.3);
+    border-radius: 1dvh;
+    padding: 1.5dvh;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 1.8dvh;
+    transition: all 0.3s ease;
+    cursor: not-allowed; 
+    pointer-events: none; 
+}
+
+.login-form .btinc.active {
+    border: 0.3dvh solid rgb(233, 198, 0);
+    box-shadow: 0 0 1dvh rgb(233, 198, 0, 0.5);
+    color: rgb(233, 198, 0);
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+
+.login-form .input-group label {
+    color: white;
+    font-size: 1.6dvh;
+    letter-spacing: 0.1dvh;
+    text-transform: uppercase;
+}
+
+.login-form .input-group label.active {
+    color: white;
+    font-size: 1.6dvh;
+    letter-spacing: 0.1dvh;
+    text-transform: uppercase;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 15px rgb(255, 255, 255);
+}
+
+
+.swal2-popup {
+    font-family: 'Montserrat', sans-serif !important; 
+}
+

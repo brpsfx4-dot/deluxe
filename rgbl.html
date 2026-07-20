@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema</title>
+    <link rel="stylesheet" href="./css/nv.css">
+    <link rel="stylesheet" href="./css/rgblts.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Bellefair&family=DM+Serif+Text:ital@0;1&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Julius+Sans+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Petrona:ital,wght@0,100..900;1,100..900&family=Smooch+Sans:wght@100..900&family=Vina+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@5/dark.css"> 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="./js/pf.js"></script>
+    <script type="module" src="./js/anm.js"></script>
+    <script type="module" src="./js/frm.js"></script>
+</head>
+<body>
+    
+<div class="hdd">
+    <div class="bx1">
+        <nav>
+            <a href="./s1.html" class="bx2">
+                <div class="lg">
+                    <div class="header-line">DELUXE <span class="sbtxt">MX</span></div>
+                    <p class="dscp1" id="dntx">GRADUACIONES & EVENTOS SOCIALES</p>
+                </div>
+            </a>
+
+            <ul>
+                <li><a href="./s1.html">Inicio</a></li>
+                <li><a href="./bdbl.html">Boletos registrados</a></li>
+                <li><a href="./stbl.html" id="btn-estadisticas" style="display: none;">Estadísticas de Venta</a></li>
+                <li style="position: relative;">
+                    <a href="javascript:void(0);" class="insss" id="btn-avatar">
+                        <img id="avatar-menu" src="" alt="Perfil" style="display:none;">
+                    </a>
+                    <div class="user-dropdown" id="user-dropdown">
+                        <a href="./stus.html">Mi estadistica</a>
+                        <a href="javascript:void(0);" id="btn-logout">Cerrar sesión</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="hddbl">
+            <div class="bx1bl">
+                <form class="login-formbl">
+                    <h2>Registro de boletos</h2>
+                    <div class="inpt-clm">
+                        <div class="input-group">
+                        <label for="Prepa">Prepa</label>
+                        <select name="Prepa" id="Prepa" class="default" onchange="checkSelection(this)">
+                                <option value="slcc" disabled selected style="color: rgba(255, 255, 255, 0.4);">Elija una opción</option>
+                                <option value="enp1"><b>ENP 1 - Gabino Barreda</b></option>
+                                <option value="enp2"><b>ENP 2 - Erasmo Castellanos Quinto</b></option>
+                                <option value="enp3"><b>ENP 3 - Justo Sierra</b></option>
+                                <option value="enp4"><b>ENP 4 - Vidal Alcocer</b></option>
+                                <option value="enp5"><b>ENP 5 - José Vasconcelos</b></option>
+                                <option value="enp6"><b>ENP 6 - Antonio Caso</b></option>
+                                <option value="enp7"><b>ENP 7 - Ezequiel A. Chávez</b></option>
+                                <option value="enp8"><b>ENP 8 - Miguel E. Schulz</b></option>
+                                <option value="enp9"><b>ENP 9 - Pedro de Alba</b></option>
+                                <option value="cch_azc"><b>CCH Azcapotzalco</b></option>
+                                <option value="cch_nau"><b>CCH Naucalpan</b></option>
+                                <option value="cch_oriente"><b>CCH Oriente</b></option>
+                                <option value="cch_sur"><b>CCH Sur</b></option>
+                                <option value="cch_vallejo"><b>CCH Vallejo</b></option>
+                        </select>
+                    </div>
+
+                    </div>
+                    <div class="inpt-clm">
+                        <div class="input-group">
+                            <label for="nmcl">Nombre</label>
+                            <input type="text" id="nmcl" placeholder="Juan Pérez García" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="ctnbl">Cantidad de boletos</label>
+                            <input type="number" id="ctnbl" placeholder="1" min="1" required>
+                        </div>
+                    </div>
+                         <div class="input-group">
+                            <label for="mtdpg">Metodo de pago</label>
+                            <select name="Metodo de pago" id="mtdpg" class="default" onchange="checkSelection(this)">
+                                <option value="slcc" disabled selected style="color: rgba(255, 255, 255, 0.4);">Elija una opción</option>
+                                <option value="trj">Tarjeta</option>
+                                <option value="fct">Efectivo</option>
+                            </select>
+                        </div>
+                    <div class="input-group">
+                        <label for="ctnbl_tot">Costo total del boleto</label>
+                        <div class="currency-wrapper">
+                            <span class="currency-symbol">$</span>
+                            <input type="text" id="ctnbl_tot" placeholder="0.00" readonly>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="cmsn">Comisión</label>
+                        <div class="currency-wrapper">
+                            <span class="currency-symbol">$</span>
+                            <input type="text" id="cmsn" placeholder="0.00" readonly>
+                        </div>
+                    </div>
+                   <button type="submit" class="btn-registro-boleto">Ingresar</button>
+                </form>
+
+                <form class="login-formbl" onsubmit="return false;">
+                    <h2>Coincidencias</h2>
+                    <div class="inpt-clm">
+                        <div class="input-group">
+                            <label for="prp2">Prepa</label>
+                           
+                            <select id="prp2" class="default" disabled>
+                                <option value="" disabled selected>Elija una opción</option>
+                                <option value="enp1">ENP 1 - Gabino Barreda</option>
+                                <option value="enp2">ENP 2 - Erasmo Castellanos Quinto</option>
+                                <option value="enp3">ENP 3 - Justo Sierra</option>
+                                <option value="enp4">ENP 4 - Vidal Alcocer</option>
+                                <option value="enp5">ENP 5 - José Vasconcelos</option>
+                                <option value="enp6">ENP 6 - Antonio Caso</option>
+                                <option value="enp7">ENP 7 - Ezequiel A. Chávez</option>
+                                <option value="enp8">ENP 8 - Miguel E. Schulz</option>
+                                <option value="enp9">ENP 9 - Pedro de Alba</option>
+                                <option value="cch_azc">CCH Azcapotzalco</option>
+                                <option value="cch_nau">CCH Naucalpan</option>
+                                <option value="cch_oriente">CCH Oriente</option>
+                                <option value="cch_sur">CCH Sur</option>
+                                <option value="cch_vallejo">CCH Vallejo</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="inpt-clm">
+                        <div class="input-group">
+                            <label for="nmcl2">Nombre</label>
+                            <input type="text" id="nmcl2" placeholder="Juan Pérez García" readonly>
+                        </div>
+                        <div class="input-group">
+                            <label for="ctnbl2">Cantidad de boletos</label>
+                            <input type="number" id="ctnbl2" placeholder="0" min="1" readonly>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="mtdpg2">Metodo de pago</label>
+                        <!-- Cambiamos a select para poder editar conservando las opciones originales -->
+                        <select id="mtdpg2" class="default" disabled>
+                            <option value="" disabled selected>Elija una opción</option>
+                            <option value="trj">Tarjeta</option>
+                            <option value="fct">Efectivo</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="ctnbl_tot2">Costo total del boleto</label>
+                        <div class="currency-wrapper">
+                            <span class="currency-symbol">$</span>
+                            <input type="text" id="ctnbl_tot2" placeholder="0.00" readonly>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="cmsn2">Comisión</label>
+                        <div class="currency-wrapper">
+                            <span class="currency-symbol">$</span>
+                            <input type="text" id="cmsn2" placeholder="0.00" readonly>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="usuario2">Usuario</label>
+                        <input type="text" id="usuario2" placeholder="Datos de coincidencia" readonly>
+                    </div>
+                    
+                    <div class="btn-group-coincidencias">
+                        <button type="button" id="btn-editar-coincidencia" class="btn-registro-boleto" disabled>Editar</button>
+                        <button type="button" id="btn-eliminar-coincidencia" class="btn-registro-boleto btn-delete" disabled>Eliminar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="module" src="./js/pf.js"></script>
+<script type="module" src="./js/anm.js"></script>
+<script type="module" src="./js/frm.js"></script>
+</body>
+</html>

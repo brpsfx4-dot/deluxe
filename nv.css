@@ -1,0 +1,305 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+   /* overflow-y: hidden;*/
+}
+
+nav {
+    display: flex;
+    background-color: transparent; 
+    height: 10vh;
+    padding-right: 5vh;
+    padding-left: 5vh;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    align-items: center;
+    width: 100%;
+    z-index: 100;
+}
+
+.lg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2.5vh;
+    line-height: 1;
+}
+
+.header-line { 
+    display: flex; 
+    align-items: baseline; 
+    gap: 0.5vh; 
+}
+
+.lg p { 
+    margin: 3px 0; 
+}
+
+.bx1 {
+    width: 100%;
+    background-image: url('../rsc/bk/bdbl.png');
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+    position: relative;
+    z-index: 2;
+}
+
+.bx1 ul {
+    display: flex;
+    list-style: none;
+    gap: 5vh; 
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.bx2 {
+    margin-left: 2vh;
+    transform: translateY(0.2vh);
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0.3vh;
+    text-decoration: none;
+    transition: all 0.5s ease;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0), 0 0 5px rgba(255, 255, 255, 0), 0 0 18px rgba(255, 255, 255, 0.8);
+    animation: rp 1.5s alternate infinite;
+}
+
+.bx2:hover {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8), 0 0 5px rgba(255, 255, 255, 0.8), 0 0 18px rgba(255, 255, 255, 0.8);
+    transform: translateY(-0.5vh);
+}
+
+.sbtxt {
+    color: rgb(233, 198, 0);
+    font-size: 2vh;
+    opacity: 0;
+    transform: translateX(-1vh);
+    animation: mostrarSubtexto 0.5s ease forwards;
+    animation-delay: 0.5s;
+}
+
+.dscp1 {
+    font-size: 1vh;
+    text-align: center;
+    color: white;
+    opacity: 0;
+    margin: 0.5vh 0 0 0 !important;
+    transform: translateY(-0.5vh);
+    animation: mostrarDescripcion 0.5s ease forwards;
+    animation-delay: 0.8s;
+}
+
+.bx1 ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.8vh;
+    transition: color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
+}
+
+.bx1 ul li a:hover { 
+    color: rgb(233, 198, 0); 
+    text-shadow: 0 0 8px rgba(255, 217, 0, 0.8), 0 0 5px rgb(233, 198, 0), 0 0 20px rgb(233, 198, 0);
+}
+
+.ncbzxd {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tx1{
+    font-size: 6vh;
+    text-align: center;
+    color: white;
+    opacity: 1;
+    font-family: "Montserrat", sans-serif !important;
+    line-height: 1;
+    animation: blrr1 0.8s ease forwards; 
+}
+
+.tx2{
+    font-size: 4vh;
+    text-align: center;
+    color: white;
+    opacity: 1;
+    font-family: "Montserrat", sans-serif !important;
+    line-height: 1;
+    animation: blrr2 1s ease forwards; 
+}
+
+@keyframes blrr1 {
+    from{
+        text-shadow: 0 0 8px rgba(255, 255, 255, 0), 0 0 5px rgba(255, 255, 255, 0), 0 0 18px rgba(255, 255, 255, 0);
+    }
+    to{
+        text-shadow: 0 0 8px rgba(255, 255, 255, 0.8), 0 0 5px rgba(255, 255, 255, 0.8), 0 0 14px rgba(255, 255, 255, 0.8);
+    }
+}
+
+@keyframes blrr2 {
+    from{
+        text-shadow: 0 0 8px rgba(255, 255, 255, 0), 0 0 5px rgba(255, 255, 255, 0), 0 0 18px rgba(255, 255, 255, 0);
+    }
+    to{
+        color: rgb(233, 198, 0); 
+        text-shadow: 0 0 5px rgba(255, 217, 0, 0.8), 0 0 5px rgb(233, 198, 0), 0 0 20px rgb(233, 198, 0);
+    }
+}
+
+@keyframes mostrarSubtexto {
+    to {
+        opacity: 1;
+        transform: translateX(0vh);
+        text-shadow: 0 0 8px rgba(255, 217, 0, 0.8), 0 0 5px rgb(233, 198, 0), 0 0 20px rgb(233, 198, 0);
+    }
+}
+
+@keyframes mostrarDescripcion {
+    to {
+        opacity: 1;
+        transform: translateY(0.5vh);
+    }
+}
+
+.ctnbinf {
+    position: absolute;
+    bottom: 8vh; 
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+    text-decoration: none;
+}
+
+.insss {
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: inline-flex; 
+    align-items: center;
+    justify-content: center;
+    margin: 0vh;
+    padding: 0;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.user-dropdown {
+    display: none;
+    position: absolute;
+    top: 120%; 
+    right: 0;
+    background-color: #1a1a1a;
+    border: 0.2vh solid rgba(255, 255, 255, 0.15);
+    border-radius: 1.2vh;
+    width: 20vh;
+    height: auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+.user-dropdown.show {
+    display: flex;
+}
+
+.user-dropdown a {
+    color: white !important;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5vh !important;
+    padding: 1.5vh 2vh;
+    display: block;
+    text-align: left;
+    transition: background 0.3s ease, color 0.3s ease;
+    line-height: 1.2vh !important;
+}
+
+.user-dropdown a:hover {
+    background-color: #1a1a1a;
+    color: rgb(233, 198, 0) !important;
+    text-shadow: 0 0 0.4vh rgba(233, 198, 0, 0.5);
+}
+
+.user-dropdown a:not(:last-child) {
+    border-bottom: 0.4vh solid rgba(255, 255, 255, 0.05);
+}
+
+.swal2-popup {
+    font-family: 'Montserrat', sans-serif !important; 
+}
+
+
+.ctnbinf {
+    position: absolute;
+    bottom: 8vh; 
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.ctnbinf .btinc {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.8vh;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.2vh;
+    color: white;
+    background: rgba(0, 0, 0, 0.4);
+    border: 0.3vh solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    padding: 1.5vh 4vh;
+    cursor: pointer;
+    transition: all 0.4s ease-out;
+    display: inline-block;
+    margin-top: 0;
+    backdrop-filter: blur(8px);
+}
+
+.ctnbinf .btinc:hover {
+    border-color: rgb(233, 198, 0);
+    color: rgb(233, 198, 0);
+    background: rgba(0, 0, 0, 0.7);
+    transform: translateY(-0.5vh);
+    box-shadow: 
+        0 0 1vh rgba(233, 198, 0, 0.6),
+        0 0 2vh rgba(233, 198, 0, 0.4);
+    text-shadow: 0 0 8px rgba(255, 217, 0, 0.8);
+}
+
+.ctnbinf .btinc:active {
+    transform: translateY(-0.2vh);
+    box-shadow: 
+        0 0 0.5vh rgba(233, 198, 0, 0.4),
+        0 0 1vh rgba(233, 198, 0, 0.2);
+}

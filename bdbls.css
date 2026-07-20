@@ -1,0 +1,204 @@
+*{
+    z-index: 5;
+}
+
+.table-container-wrapper {
+    width: 100%;
+    min-height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 4vh 2vh;
+}
+
+.table-card {
+    font-family: "Montserrat", sans-serif;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 4vh;
+    border-radius: 3vh;
+    border: 0.1vh solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    width: 95%;
+    max-width: 1400px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3vh;
+    border-bottom: 1px solid rgba(233, 198, 0, 0.2);
+    padding-bottom: 2vh;
+}
+
+.table-header h2 {
+    font-size: 3.5vh;
+    color: rgb(233, 198, 0);
+    text-shadow: 0 0 5px rgba(255, 217, 0, 0.8), 0 0 15px rgb(233, 198, 0);
+    margin: 0;
+}
+
+.badge-counter {
+    background: rgba(233, 198, 0, 0.15);
+    border: 1px solid rgb(233, 198, 0);
+    color: rgb(233, 198, 0);
+    padding: 0.8vh 2vh;
+    border-radius: 2vh;
+    font-size: 1.6vh;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.tabla-deluxe {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 0.8vh;
+    color: #ffffff;
+    text-align: left;
+}
+
+.tabla-deluxe thead th {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.4vh;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 1.8vh;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    font-weight: 600;
+}
+
+.tabla-deluxe tbody tr {
+    background: rgba(255, 255, 255, 0.03);
+    transition: all 0.3s ease;
+}
+
+.tabla-deluxe tbody tr:hover {
+    background: rgba(233, 198, 0, 0.08);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.tabla-deluxe tbody td {
+    padding: 1.8vh;
+    font-size: 1.6vh;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.tabla-deluxe tbody tr td:first-child {
+    border-top-left-radius: 1vh;
+    border-bottom-left-radius: 1vh;
+    border-left: 1px solid rgba(255, 255, 255, 0.05);
+    color: rgb(233, 198, 0);
+    font-weight: 700;
+}
+
+.tabla-deluxe tbody tr td:last-child {
+    border-top-right-radius: 1vh;
+    border-bottom-right-radius: 1vh;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.badge-metodo {
+    padding: 0.5vh 1.2vh;
+    border-radius: 0.5vh;
+    font-size: 1.3vh;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.badge-metodo.tarjeta {
+    background: rgba(33, 150, 243, 0.2);
+    color: #64b5f6;
+    border: 1px solid rgba(33, 150, 243, 0.4);
+}
+
+.badge-metodo.efectivo {
+    background: rgba(76, 175, 80, 0.2);
+    color: #81c784;
+    border: 1px solid rgba(76, 175, 80, 0.4);
+}
+
+.loading-cell, .empty-cell {
+    text-align: center !important;
+    padding: 5vh !important;
+    color: rgba(255, 255, 255, 0.5);
+    font-style: italic;
+}
+
+
+
+.filters-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5vh;
+    margin-bottom: 2.5vh;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 2vh;
+    border-radius: 1.5vh;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.filter-group {
+    flex: 1 1 180px;
+}
+
+.filter-group.main-search {
+    flex: 2 1 260px;
+}
+
+.filter-group input,
+.filter-group select {
+    width: 100%;
+    padding: 1.2vh 1.8vh;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(233, 198, 0, 0.3);
+    border-radius: 1vh;
+    color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.4vh;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.filter-group input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.filter-group input:focus,
+.filter-group select:focus {
+    border-color: rgb(233, 198, 0);
+    box-shadow: 0 0 10px rgba(233, 198, 0, 0.3);
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.filter-group select option {
+    background: #121212;
+    color: #ffffff;
+}
+
+.btn-reset {
+    background: rgba(233, 198, 0, 0.15);
+    border: 1px solid rgb(233, 198, 0);
+    color: rgb(233, 198, 0);
+    padding: 1.2vh 2vh;
+    border-radius: 1vh;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.4vh;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-reset:hover {
+    background: rgb(233, 198, 0);
+    color: #000;
+    box-shadow: 0 0 12px rgba(233, 198, 0, 0.5);
+}

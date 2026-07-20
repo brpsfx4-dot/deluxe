@@ -1,0 +1,293 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+   /* overflow-y: hidden;*/
+}
+.hddbl {
+    width: 100%;
+}
+
+.bx1bl {
+    width: 100%;
+    min-height: 90vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; 
+    gap: 10vh;               
+    padding: 3vh 2vh;
+    position: relative;
+    z-index: 1;
+
+}
+
+.login-formbl {
+    font-family: "Montserrat", sans-serif;
+    background: rgba(0, 0, 0, 0.4); 
+    padding: 4vh;
+    border-radius: 5vh;
+    border: 0.1vh solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    width: 75vh;
+    max-width: 100%;
+    margin: 0;
+}
+
+.login-formbl h2 {
+    font-size: 3.5vh;
+    text-align: center;
+    color: rgb(233, 198, 0); 
+    text-shadow: 0 0 5px rgba(255, 217, 0, 0.8), 0 0 15px rgb(233, 198, 0);
+    margin-bottom: 1vh;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    text-align: left;
+}
+
+.input-group label {
+    color: white;
+    font-size: 1.6vh;
+    letter-spacing: 0.1vh;
+    text-transform: uppercase;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+.input-group input {
+    font-family: "Montserrat", sans-serif;
+    background: rgba(255, 255, 255, 0.05);
+    border: 0.3vh solid rgba(255, 255, 255, 0.3);
+    border-radius: 1vh;
+    padding: 1.5vh;
+    color: rgb(233, 198, 0);
+    font-size: 1.8vh;
+    outline: none;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.input-group input:focus {
+    border-color: rgb(233, 198, 0);
+    box-shadow: 0 0 1vh rgba(233, 198, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.login-formbl .btinc {
+    margin-top: 2vh;
+    width: 20%; 
+    font-family: "Montserrat", sans-serif;
+    background: rgba(255, 255, 255, 0.05);
+    border: 0.3vh solid rgba(255, 255, 255, 0.3);
+    border-radius: 1vh;
+    padding: 1.5vh;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 1.8vh;
+    transition: all 0.3s ease;
+    cursor: not-allowed; 
+    pointer-events: none; 
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 0.2vh;
+    font-weight: 500;
+}
+
+.login-formbl .btinc.active {
+    border: 0.3vh solid rgb(233, 198, 0);
+    box-shadow: 0 0 1vh rgb(233, 198, 0, 0.5);
+    color: rgb(233, 198, 0);
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.login-formbl .btinc:hover:not([style*="pointer-events: none"]) {
+    box-shadow: 
+        0 0 10px rgba(255, 255, 255, 0.7),
+        0 0 20px rgba(255, 255, 255, 0.5),
+        0 0 30px rgba(255, 255, 255, 0.3);
+    background-color: white;
+    color: #1a1a1a;
+    transform: translateY(-3px);
+}
+
+.login-formbl .input-group label.active {
+    color: white;
+    font-size: 1.6vh;
+    letter-spacing: 0.1vh;
+    text-transform: uppercase;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 15px rgb(255, 255, 255);
+}
+
+.swal2-popup {
+    font-family: 'Montserrat', sans-serif !important; 
+}
+
+.inpt-clm {
+    display: flex;
+    flex-direction: row;
+    gap: 3vh;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    background: transparent;
+    height: 2vh; 
+}
+
+.input-group select {
+    font-family: "Montserrat", sans-serif;
+    background: rgba(255, 255, 255, 0.05);
+    border: 0.3vh solid rgba(255, 255, 255, 0.3);
+    border-radius: 1vh;
+    padding: 1.5vh;
+    color: rgb(233, 198, 0); 
+    font-size: 1.8vh;
+    outline: none;
+    width: 100%;
+    transition: all 0.3s ease;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+}
+
+.input-group select:invalid {
+    color: rgba(255, 255, 255, 0.4); 
+}
+
+.input-group select:focus {
+    border-color: rgb(233, 198, 0);
+    box-shadow: 0 0 1vh rgba(233, 198, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.input-group select option {
+    background: rgb(30, 30, 30);
+    color: rgb(233, 198, 0);
+    font-family: "Montserrat", sans-serif;
+    padding: 1vh;
+}
+
+.input-group select option[disabled] {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+@keyframes buttonPulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(0.95);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1.05);
+        opacity: 1;
+        box-shadow: 
+            0 0 15px rgba(233, 198, 0, 0.8),
+            0 0 25px rgba(233, 198, 0, 0.6);
+    }
+}
+
+.btinc.animate {
+    animation: buttonPulse 0.65s ease-out;
+    border-color: rgb(233, 198, 0);
+    color: rgb(233, 198, 0);
+    background: transparent;
+}
+
+.currency-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.currency-symbol {
+    position: absolute;
+    left: 12px;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: bold;
+}
+
+.currency-wrapper input {
+    padding-left: 25px !important; 
+}
+
+.btn-registro-boleto {
+    width: 100%;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(0, 0, 0, 0.5));
+    border: 1px solid rgba(255, 215, 0, 0.4);
+    border-radius: 6px;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    display: block;
+    margin-top: 20px;
+}
+
+.btn-registro-boleto:hover {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.25), rgba(20, 20, 20, 0.8));
+    border-color: rgba(255, 215, 0, 0.8);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+.btn-registro-boleto:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.btn-group-coincidencias {
+    display: flex;
+    flex-direction: row;
+    gap: 2vh;
+    margin-top: 20px;
+}
+
+.btn-group-coincidencias .btn-registro-boleto {
+    margin-top: 0;
+    flex: 1;
+}
+
+.btn-group-coincidencias .btn-delete {
+    background: linear-gradient(135deg, rgba(211, 47, 47, 0.15), rgba(0, 0, 0, 0.5));
+    border: 1px solid rgba(211, 47, 47, 0.5);
+}
+
+.btn-group-coincidencias .btn-delete:hover {
+    background: linear-gradient(135deg, rgba(211, 47, 47, 0.35), rgba(20, 20, 20, 0.8));
+    border-color: rgba(211, 47, 47, 0.9);
+    box-shadow: 0 0 15px rgba(211, 47, 47, 0.3);
+}
+
+.btn-group-coincidencias button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    pointer-events: none;
+    border-color: rgba(255, 255, 255, 0.1);
+}

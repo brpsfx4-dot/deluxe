@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Estadística | DELUXE MX</title>
+    <link rel="stylesheet" href="./css/nv.css">
+    <link rel="stylesheet" href="./css/rgblts.css">
+    <link rel="stylesheet" href="./css/bdbls.css">
+    <link rel="stylesheet" href="./css/stus.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+<div class="hdd">
+    <div class="bx1">
+
+        <nav>
+            <a href="./s1.html" class="bx2">
+                <div class="lg">
+                    <div class="header-line">DELUXE <span class="sbtxt">MX</span></div>
+                    <p class="dscp1" id="dntx">GRADUACIONES & EVENTOS SOCIALES</p>
+                </div>
+            </a>
+
+            <ul>
+                <li><a href="./s1.html">Inicio</a></li>
+                <li><a href="./bdbl.html">Boletos registrados</a></li>
+                <li><a href="./stbl.html" id="btn-estadisticas" style="display: none;">Estadísticas de Venta</a></li>
+                <li style="position: relative;">
+                    <a href="javascript:void(0);" class="insss" id="btn-avatar">
+                        <img id="avatar-menu" src="" alt="Perfil" style="display:none;">
+                    </a>
+                    <div class="user-dropdown" id="user-dropdown">
+                        <a href="./stus.html">Mi estadística</a>
+                        <a href="javascript:void(0);" id="btn-logout">Cerrar sesión</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+
+        <div class="hddbl">
+            <div class="table-container-wrapper">
+                <div class="table-card">
+                    
+                    <div class="table-header">
+                        <h2>Estadísticas de Usuario: <span id="nombre-usuario-display" class="user-highlight">Cargando...</span></h2>
+                        <span class="badge-counter" id="total-registros-user">Cargando datos...</span>
+                    </div>
+
+
+                    <div class="kpi-grid">
+                        <div class="kpi-card">
+                            <span class="kpi-title">Transacciones Registradas</span>
+                            <h3 id="kpi-transacciones">0</h3>
+                            <small class="kpi-desc">Operaciones realizadas</small>
+                        </div>
+                        <div class="kpi-card">
+                            <span class="kpi-title">Boletos Vendidos</span>
+                            <h3 id="kpi-boletos-totales">0</h3>
+                            <small class="kpi-desc">Total de tickets asignados</small>
+                        </div>
+                        <div class="kpi-card">
+                            <span class="kpi-title">Escuela Predilecta</span>
+                            <h3 id="kpi-top-prepa">N/A</h3>
+                            <small class="kpi-desc">Plantel con mayor registro</small>
+                        </div>
+                        <div class="kpi-card">
+                            <span class="kpi-title">Método Favorito</span>
+                            <h3 id="kpi-top-metodo">N/A</h3>
+                            <small class="kpi-desc">Canal de pago frecuente</small>
+                        </div>
+                    </div>
+
+     
+                    <div class="charts-grid">
+                        
+
+                        <div class="chart-box">
+                            <h3>Boletos Registrados por Prepa / CCH</h3>
+                            <div class="chart-wrapper">
+                                <canvas id="chartPrepas"></canvas>
+                            </div>
+                        </div>
+
+
+                        <div class="chart-box">
+                            <h3>Distribución por Método de Pago</h3>
+                            <div class="chart-wrapper">
+                                <canvas id="chartMetodos"></canvas>
+                            </div>
+                        </div>
+
+
+                        <div class="chart-box full-width">
+                            <h3>Actividad por Horario de Registro</h3>
+                            <div class="chart-wrapper">
+                                <canvas id="chartHorarios"></canvas>
+                            </div>
+                        </div>
+
+                    </div> 
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="module" src="./js/stus.js"></script>
+<script type="module" src="./js/pf.js"></script>
+<script type="module" src="./js/anm.js"></script>
+</body>
+</html>

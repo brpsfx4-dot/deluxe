@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boletos Registrados | DELUXE MX</title>
+    <link rel="stylesheet" href="./css/nv.css">
+    <link rel="stylesheet" href="./css/rgblts.css">
+    <link rel="stylesheet" href="./css/bdbls.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@5/dark.css"> 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    
+<div class="hdd">
+    <div class="bx1">
+        <nav>
+            <a href="./s1.html" class="bx2">
+                <div class="lg">
+                    <div class="header-line">DELUXE <span class="sbtxt">MX</span></div>
+                    <p class="dscp1" id="dntx">GRADUACIONES & EVENTOS SOCIALES</p>
+                </div>
+            </a>
+
+            <ul>
+                <li><a href="./s1.html">Inicio</a></li>
+                <li><a href="./bdbl.html">Boletos registrados</a></li>
+                <li><a href="./stbl.html" id="btn-estadisticas" style="display: none;">Estadísticas de Venta</a></li>
+                <li style="position: relative;">
+                    <a href="javascript:void(0);" class="insss" id="btn-avatar">
+                        <img id="avatar-menu" src="" alt="Perfil" style="display:none;">
+                    </a>
+                    <div class="user-dropdown" id="user-dropdown">
+    <a href="./stus.html">Mi estadistica</a>
+    <!-- El botón 'Control de cuentas' se insertará dinámicamente aquí solo si es Angel (dueno) -->
+    <a href="javascript:void(0);" id="btn-logout">Cerrar sesión</a>
+</div>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="hddbl">
+            <div class="table-container-wrapper">
+                <div class="table-card">
+                    <div class="table-header">
+                        <h2>Boletos Registrados</h2>
+                        <span class="badge-counter" id="total-registros">Total: 0</span>
+                    </div>
+
+                    <div class="filters-bar">
+                        <div class="filter-group main-search">
+                            <input type="text" id="filter-search" placeholder="Buscar cliente o # registro..." autocomplete="off">
+                        </div>
+
+                        <div class="filter-group">
+                            <select id="filter-prepa">
+                                <option value="">Todas las prepas</option>
+                                <option value="enp1">ENP 1 - Gabino Barreda</option>
+                                <option value="enp2">ENP 2 - Erasmo Castellanos Quinto</option>
+                                <option value="enp3">ENP 3 - Justo Sierra</option>
+                                <option value="enp4">ENP 4 - Vidal Alcocer</option>
+                                <option value="enp5">ENP 5 - José Vasconcelos</option>
+                                <option value="enp6">ENP 6 - Antonio Caso</option>
+                                <option value="enp7">ENP 7 - Ezequiel A. Chávez</option>
+                                <option value="enp8">ENP 8 - Miguel E. Schulz</option>
+                                <option value="enp9">ENP 9 - Pedro de Alba</option>
+                                <option value="cch_azc">CCH Azcapotzalco</option>
+                                <option value="cch_nau">CCH Naucalpan</option>
+                                <option value="cch_oriente">CCH Oriente</option>
+                                <option value="cch_sur">CCH Sur</option>
+                                <option value="cch_vallejo">CCH Vallejo</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <select id="filter-metodo">
+                                <option value="">Todos los métodos</option>
+                                <option value="trj">Tarjeta</option>
+                                <option value="fct">Efectivo</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <input type="text" id="filter-usuario" placeholder="Filtrar por usuario..." autocomplete="off">
+                        </div>
+
+                        <button id="btn-reset-filters" class="btn-reset" title="Limpiar Filtros">↺ Limpiar</button>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="tabla-deluxe">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Cliente</th>
+                                    <th>Cant. Boletos</th>
+                                    <th>Prepa</th>
+                                    <th>Método de Pago</th>
+                                    <th>Usuario</th>
+                                    <th>Fecha de Registro</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabla-boletos-body">
+                                <tr>
+                                    <td colspan="7" class="loading-cell">Cargando registros...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="module" src="./js/bdblts.js"></script>
+<script type="module" src="./js/pf.js"></script>
+<script type="module" src="./js/anm.js"></script>
+</body>
+</html>
