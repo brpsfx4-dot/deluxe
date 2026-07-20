@@ -45,7 +45,7 @@ nav {
 
 .bx1 {
     width: 100%;
-    background-image: url('../rsc/bk/bdbl.png');
+    background-image: url('./bdbl.png');
     min-height: 100vh;
     background-size: cover;
     background-position: center;
