@@ -217,6 +217,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .currency-wrapper {
     position: relative;
     display: flex;
+    font-size: 2dvh;
     align-items: center;
 }
 
@@ -233,13 +234,13 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .btn-registro-boleto {
     width: 100%;
-    padding: 12px 24px;
+    padding: 2dvh 5dvh;
     background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(0, 0, 0, 0.5));
-    border: 1px solid rgba(255, 215, 0, 0.4);
+    border: 0.2dvh solid rgba(255, 215, 0, 0.4);
     border-radius: 6px;
     color: #ffffff;
     font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
+    font-size: 2dvh;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -276,7 +277,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .btn-group-coincidencias .btn-delete {
     background: linear-gradient(135deg, rgba(211, 47, 47, 0.15), rgba(0, 0, 0, 0.5));
-    border: 1px solid rgba(211, 47, 47, 0.5);
+    border: 0.2dvh solid rgba(211, 47, 47, 0.5);
 }
 
 .btn-group-coincidencias .btn-delete:hover {
