@@ -223,13 +223,13 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .currency-symbol {
     position: absolute;
-    left: 12px;
+    left: 1dvh;
     color: rgba(255, 255, 255, 0.6);
     font-weight: bold;
 }
 
 .currency-wrapper input {
-    padding-left: 25px !important; 
+    padding-left: 3dvh !important; 
 }
 
 .btn-registro-boleto {
@@ -237,18 +237,18 @@ input[type="number"]::-webkit-inner-spin-button {
     padding: 2dvh 5dvh;
     background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(0, 0, 0, 0.5));
     border: 0.2dvh solid rgba(255, 215, 0, 0.4);
-    border-radius: 6px;
+    border-radius: 2dvh;
     color: #ffffff;
     font-family: 'Montserrat', sans-serif;
     font-size: 2dvh;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.2dvh;
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     display: block;
-    margin-top: 20px;
+    margin-top: 2dvh;
 }
 
 .btn-registro-boleto:hover {
